@@ -1,0 +1,39 @@
+{
+  "name": "mirror",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev": "next dev --port 3002",
+    "build": "next build --webpack",
+    "start": "next start --port 3002",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "assets": "node scripts/prepare-assets.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "next": "16.3.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "@fontsource/ibm-plex-sans-jp": "^5.2.0",
+    "@fontsource/space-grotesk": "^5.2.0",
+    "@mediapipe/tasks-vision": "0.10.32"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "16.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanalia7355/mirror.git"
+  }
+}

@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.wasm binary
+*.task binary
+*.tflite binary
+*.png binary
+*.jpg binary
+group*-shard* binary
