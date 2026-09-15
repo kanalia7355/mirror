@@ -8,9 +8,11 @@
 
 ## 手元で動かす
 
-Node.js 22を使います。
+GitとNode.js 22を用意して、リポジトリをcloneします。
 
 ```sh
+git clone https://github.com/kanalia7355/mirror.git
+cd mirror
 npm ci
 npm run dev
 ```
@@ -21,7 +23,9 @@ http://localhost:3002 を開いてください。モデルや画像はリポジ�
 
 ## Vercelに置く
 
-Vercelの **Add New → Project** から [`kanalia7355/mirror`](https://github.com/kanalia7355/mirror) を選びます。Root Directoryはリポジトリ直下。Next.js、Node.js 22、インストール・ビルドコマンドは設定ファイルに指定済みです。環境変数や外部DBの設定はありません。
+自分のGitHubアカウントにこのリポジトリをForkするか、cloneした内容を自分のリポジトリへpushしてください。VercelにそのGitHubアカウントを連携し、自分のリポジトリをImportします。
+
+このアプリだけを置いたリポジトリなら、Root Directoryは直下です。別のリポジトリのサブフォルダーに置く場合は、このアプリの `package.json` があるフォルダーを指定してください。Next.js、Node.js 22、インストール・ビルドコマンドは設定ファイルに指定済みです。環境変数や外部DBの設定はありません。
 
 推論はブラウザーで動き、モデルとWASMはアプリと同じ配信元から読み込みます。初回表示にはモデルのダウンロード時間がかかります。
 
